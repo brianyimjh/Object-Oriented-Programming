@@ -1,0 +1,37 @@
+def menuOption():
+    print("Menu")
+    print("1. Action A")
+    print("2. Action B")
+    print("3. Action C")
+    print("0. Quit")
+    option = getIntegerRange("Enter choice: ", 0, 3)
+    return option
+
+
+def actionA():
+    print("Action A selected")
+
+
+def actionB():
+    print("Action B selected")
+
+
+def actionC():
+    print("Action C selected")
+
+
+def main():
+    # display of menu, getting option and decision flow
+    while True:
+        option = menuOption()
+        if option == 0:
+            break
+        elif option == 1:
+            actionA()
+        elif option == 2:
+            actionB()
+        else:
+            actionC()
+
+
+main()

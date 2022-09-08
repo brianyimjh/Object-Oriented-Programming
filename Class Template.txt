@@ -1,0 +1,49 @@
+from abc import ABC, abstractmethod
+
+
+class Sample(ABC):
+    _classVariable = clsValue
+
+    def __init__(self, aValue, bValue, cValue):
+        """ constructor that execute when an object is created """
+        self._aaa = aValue
+        self._bbb = bValue
+        self._ccc = cValue
+        self._classVariable = type(self)._classVariable
+
+    @classmethod
+    def classVariable(cls):
+        return cls._classVariable
+
+    @property
+    def aaa(self):
+        return self._aaa
+
+    @property
+    def bbb(self):
+        return self._bbb
+
+    @property
+    def ccc(self):
+        return self._ccc
+
+    @aaa.setter
+    def aaa(self, aValue):
+        self._aaa = aValue
+
+    @bbb.setter
+    def bbb(self, bValue):
+        self._bbb = bValue
+
+    @ccc.setter
+    def ccc(self, cValue):
+        self._ccc = cValue
+
+    @abstractmethod
+    def abstractMethod(self, parameter1=10):
+        """ comments """
+        pass
+
+    def __str__(self):
+        """ return the string representation of the object """
+        return f"aaa: {self._aaa}, bbb: {self._bbb}, ccc: {self._ccc}"

@@ -1,0 +1,63 @@
+def getIntegerRange(prompt, min, max):
+    while True:
+        try:
+            value = int(input(prompt))
+
+            if min <= value <= max:
+                return value
+            else:
+                print(f"Please re-enter within range")
+        except:
+            print("Sorry, I don't understand that. Please try again.")
+
+
+def getFloatRange(prompt, min, max):
+    while True:
+        try:
+            value = float(input(prompt))
+
+            if min <= value <= max:
+                return value
+            else:
+                print("Please re-enter within range")
+        except:
+            print("Sorry, I don't understand that. Please try again.")
+
+
+def getCharSet(prompt, charSet):
+    while True:
+        try:
+            value = input(prompt)
+
+            if value in charSet:
+                return value
+            else:
+                print("Please re-enter within range")
+        except:
+            print("Sorry, I don't understand that. Please try again.")
+
+
+def getPositiveFloat(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+
+            if value > 0:
+                return value
+            else:
+                print("Please enter a positive number")
+        except:
+            print("Sorry, I don't understand that. Please try again.")
+
+
+def getPositiveInteger(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+
+            if value > 0:
+                return value
+            else:
+                print("Please enter a postive integer")
+        except:
+            print("Sorry, I don't understand that. Please try again.")
